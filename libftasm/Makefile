@@ -46,8 +46,8 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $<
 
 test : $(OBJ)
-	clang -Wall -Wextra -Werror -L. -lfts  main_test.c -o test
-	clang -Wall -Wextra -Werror -L. -lfts  main_cat.c -o cat
+	clang -Wall -Wextra -Werror -L. -lfts  tests/main_test.c -o test
+	clang -Wall -Wextra -Werror -L. -lfts  tests/main_cat.c -o cat
 
 clean:
 	-@$(RM) $(OBJ)
