@@ -1,11 +1,11 @@
 FROM debian:jessie
 
-RUN apt-get update && apt-get install nasm make
+RUN apt-get update && apt-get install nasm make binutils gcc -y
 
 ADD libftasm /libftasm
 
 WORKDIR /libftasm
 
-RUN make
+RUN make re
 
-CMD ./test
+CMD ./libft_asm
