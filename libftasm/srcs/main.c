@@ -541,14 +541,15 @@ void	lasm_check_atoi(void)
 	int				i;
 	int				ret1;
 	int				ret2;
-    char			tests[7][11] = {
-		"0", "1", "-1", "-2147483648", "2147483647", "   42", "   +54"
+    char			tests[9][12] = {
+		"0", "1", "-1", "-2147483648", "2147483647", "   42", "   +54",
+		"+0", "-0",
 	};
 	unsigned int	errors = 0;
 
 	lasm_function_name_display("atoi");
 
-	for (i = 0; i < 7; i++)
+	for (i = 0; i < 9; i++)
 	{
 		ret1 = atoi(tests[i]);
 		ret2 = ft_atoi(tests[i]);
